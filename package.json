@@ -1,7 +1,7 @@
 {
   "name": "create-bsky-bot",
   "description": "Simple command for scaffolding a new bsky bot with bsky-event-handlers",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Juni <june@juniper-bender.tech>",
   "scripts": {
     "build": "tsup src/cli.ts --minify",
