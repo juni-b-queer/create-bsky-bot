@@ -1,7 +1,7 @@
 .PHONY: *
 
 dev:
-	docker compose up jetstream -d && bun run src/index.ts
+	bun run src/index.ts
 
 build:
 	docker compose build
