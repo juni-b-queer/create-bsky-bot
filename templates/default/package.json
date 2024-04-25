@@ -1,0 +1,23 @@
+{
+  "name": "{{kebab name}}",
+  "description": "{{description}}",
+  "version": "0.0.0",
+  "author": "{{contact}}",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "run": "bun run src/index.ts",
+    "build": "bun build --target=bun ./src/index.ts --outfile=./build/index.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.12.7",
+    "bsky-event-handlers": "1.0.0-beta.1"
+  },
+  "license": "{{license}}"
+}
