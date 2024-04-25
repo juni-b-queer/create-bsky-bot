@@ -2,7 +2,7 @@ name: Semantic release versioning
 on:
   push:
     branches:
-      - main
+      - master
       - next
       - beta
 jobs:
