@@ -6,7 +6,8 @@ import { resolve } from 'path';
 const templateRoot = resolve(__dirname, '..', 'templates');
 
 const caveat = `
-Make sure you have Bun and Docker installed, copy the .env.example and fill it out.
+Make sure you have Bun and Docker installed. 
+Copy the .env.example and fill it in.
 Now go out and build a bot!`;
 
 // See https://github.com/uetchy/create-create-app/blob/master/README.md for other options.

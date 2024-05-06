@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@atproto/api": "^0.12.7",
-    "bsky-event-handlers": "1.0.0-beta.4"
+    "bsky-event-handlers": "1.0.0"
   },
   "license": "{{license}}"
 }
