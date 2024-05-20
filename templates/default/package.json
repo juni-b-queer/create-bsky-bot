@@ -15,8 +15,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@atproto/api": "^0.12.7",
-    "bsky-event-handlers": "1.0.0"
+    "bsky-event-handlers": "1.1.0",
+    "@atproto/api": "^0.12.7"
   },
   "license": "{{license}}"
 }

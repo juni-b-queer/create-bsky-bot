@@ -3,6 +3,10 @@
   "description": "Simple command for scaffolding a new bsky bot with bsky-event-handlers",
   "version": "0.0.1",
   "author": "Juni <june@juniper-bender.tech>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juni-b-queer/create-bsky-bot.git"
+  },
   "scripts": {
     "build": "tsup src/cli.ts --minify",
     "clean": "shx rm -rf lib",
