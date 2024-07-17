@@ -15,27 +15,6 @@ Now go out and build a bot!`;
 // See https://github.com/uetchy/create-create-app/blob/master/README.md for other options.
 
 
-// options
-// {
-//   name: 'test',
-//   packageDir: '/home/jbender/NewBots/test',
-//   template: 'default',
-//   templateDir: '/home/jbender/JSProjects/create-bsky-bot/templates/default',
-//   year: 2024,
-//   run: [Function: run],
-//   installNpmPackage: [AsyncFunction: _],
-//   answers: {
-//     description: 'description',
-//     author: 'Juni',
-//     email: 'june@juniper-bender.tech',
-//     license: 'MIT',
-//     'node-pm': undefined,
-//     nodePm: undefined,
-//     buildaction: true,
-//     contact: 'Juni <june@juniper-bender.tech>'
-//   }
-// }
-
 create('create-bsky-bot', {
   templateRoot,
     after: (options) =>{
