@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  bskybot:
+    depends_on:
+      - jetstream
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - bun
+
+
+  jetstream:
+    image: "junibqueer/jetstream:main"
+    container_name: jetstream
+    environment:
+      - CURSOR_FILE=/data/cursor.json
+    ports:
+      - "6008:6008"
+    volumes:
+      - ./data:/data
+    networks:
+      - bun
+
+networks:
+  bun:
+    driver: bridge
