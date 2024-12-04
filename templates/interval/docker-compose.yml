@@ -3,6 +3,8 @@ services:
   bskybot:
     build: .
     restart: unless-stopped
+    volumes:
+      - ./sessionData:/sessionData
     env_file:
       - .env
     networks:
