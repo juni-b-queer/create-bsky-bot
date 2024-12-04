@@ -8,7 +8,7 @@ import {
     JetstreamSubscription,
     LogMessageAction,
     ReplyingToBotValidator,
-    ReplyToSkeetAction,
+    MessageHandler,
     IntervalSubscription,
     IntervalSubscriptionHandlers,
     AbstractHandler,
@@ -30,9 +30,9 @@ let jetstreamSubscription: JetstreamSubscription;
 let handlers = {
     post: {
         c: [
-            new CreateSkeetHandler(
-                [new ReplyingToBotValidator(), new InputEqualsValidator("Hello")],
-                [new LogMessageAction(), new ReplyToSkeetAction("World!")],
+            new MessageHandler(
+                [ReplyingToBotValidator().make(), InputEqualsValidator("Hello").make()],
+                [LogMessageAction().make(), CreateSkeetAction.make('World!', MessageHandler.generateReplyFromMessage)],
                 testAgent
             ),
             new GoodBotHandler(testAgent),

@@ -1,6 +1,6 @@
 import {
     BadBotHandler,
-    CreateSkeetHandler,
+    CreateSkeetAction,
     DebugLog,
     GoodBotHandler,
     HandlerAgent,
@@ -8,7 +8,7 @@ import {
     JetstreamSubscription,
     LogMessageAction,
     ReplyingToBotValidator,
-    ReplyToSkeetAction
+    MessageHandler
 } from 'bsky-event-handlers';
 
 const testAgent = new HandlerAgent(
@@ -25,9 +25,9 @@ let jetstreamSubscription: JetstreamSubscription;
 let handlers = {
     post: {
         c: [
-            new CreateSkeetHandler(
-                [new ReplyingToBotValidator(), new InputEqualsValidator("Hello")],
-                [new LogMessageAction(), new ReplyToSkeetAction("World!")],
+            new MessageHandler(
+                [ReplyingToBotValidator().make(), InputEqualsValidator("Hello").make()],
+                [LogMessageAction().make(), CreateSkeetAction.make('World!', MessageHandler.generateReplyFromMessage)],
                 testAgent
             ),
             new GoodBotHandler(testAgent),

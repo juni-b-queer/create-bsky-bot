@@ -5,6 +5,8 @@ services:
       - jetstream
     build: .
     restart: unless-stopped
+    volumes:
+      - ./sessionData:/sessionData
     env_file:
       - .env
     networks:
@@ -14,6 +16,7 @@ services:
   jetstream:
     image: "junibqueer/jetstream:main"
     container_name: jetstream
+    restart: unless-stopped
     environment:
       - CURSOR_FILE=/data/cursor.json
     ports:
