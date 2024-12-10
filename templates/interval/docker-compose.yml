@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  bskybot:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./sessionData:/sessionData
+    env_file:
+      - .env
+    networks:
+      - bun
+
+networks:
+  bun:
+    driver: bridge
