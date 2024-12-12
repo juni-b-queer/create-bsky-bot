@@ -56,6 +56,10 @@
               "release": "patch"
             },
             {
+              "type": "patch",
+              "release": "patch"
+            },
+            {
               "type": "minor",
               "release": "minor"
             },
@@ -92,6 +96,10 @@
               },
               {
                 "type": "fix",
+                "section": "Fixes"
+              },
+              {
+                "type": "patch",
                 "section": "Fixes"
               },
               {
@@ -138,6 +146,10 @@
               },
               {
                 "type": "fix",
+                "section": "Fixes"
+              },
+              {
+                "type": "patch",
                 "section": "Fixes"
               },
               {
