@@ -26,8 +26,8 @@ let handlers = {
     post: {
         c: [
             new MessageHandler(
-                [ReplyingToBotValidator().make(), InputEqualsValidator("Hello").make()],
-                [LogMessageAction().make(), CreateSkeetAction.make('World!', MessageHandler.generateReplyFromMessage)],
+                [ReplyingToBotValidator.make(), InputEqualsValidator.make("Hello")],
+                [LogMessageAction.make(), CreateSkeetAction.make('World!', MessageHandler.generateReplyFromMessage)],
                 testAgent
             ),
             new GoodBotHandler(testAgent),
