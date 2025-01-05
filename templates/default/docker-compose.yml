@@ -14,7 +14,7 @@ services:
 
 
   jetstream:
-    image: "junibqueer/jetstream:main"
+    image: "ghcr.io/bluesky-social/jetstream:sha-ea96859b93d1790ff20bb168e5fc442d462cea1e"
     container_name: jetstream
     restart: unless-stopped
     environment:

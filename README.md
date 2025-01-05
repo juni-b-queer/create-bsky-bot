@@ -5,7 +5,7 @@ Simple command for scafolding a new bsky bot with bsky-event-handlers
 ## Usage
 
 ```bash
-bunx create-bsky-bot <name>
+bunx create-bsky-bot <name> --template default
 ```
 
 The final prompt will ask if you also want to include a github action workflow to build and publish your docker containers
